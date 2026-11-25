@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | The Owner's Desk</title>
+  <meta name="description" content="Contact The Owner's Desk about a Project Health Check or the Project Controls Library. Email ownersdesk@trailheadstandard.com." />
+  <link rel="canonical" href="https://myownersdesk.com/contact.html" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1B2A4A;
+      --gold: #F4A61F;
+      --gold-dark: #d4901a;
+      --light: #F8F9FA;
+      --text: #2c2c2c;
+      --muted: #6b7280;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-logo span {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 700px;
+      margin: 0 auto 1rem;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+    /* SECTION BASE */
+    section { padding: 4rem 2rem; }
+    .container { max-width: 1040px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      padding: 2rem;
+      max-width: 640px;
+    }
+    .contact-card h3 { color: var(--navy); font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .contact-card p { color: var(--muted); margin-bottom: 1rem; }
+    .contact-card ul { margin: 0 0 1.5rem 1.2rem; color: var(--text); }
+    .contact-card li { margin-bottom: 0.45rem; }
+    .email-big {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      word-break: break-all;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      padding: 3rem 2rem;
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .footer-brand img { height: 32px; margin-bottom: 0.5rem; }
+    .footer-brand p { color: rgba(255,255,255,0.5); font-size: 0.82rem; max-width: 240px; line-height: 1.5; }
+    .footer-links h4 { color: #fff; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 0.4rem; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: 1040px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="images/logo.png" alt="The Owner's Desk" onerror="this.style.display='none'" />
+    <span>The Owner's Desk</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#health-check">Project Health Check</a></li>
+    <li><a href="index.html#library">Controls Library</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <h1>Talk to <span>The Owner's Desk.</span></h1>
+  <p>Questions about a Project Health Check, portfolio pricing, or the Controls Library start with one email.</p>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Health Check inquiries</h2>
+    <p class="section-sub">Email is the fastest way to reach us. If you are asking about a Project Health Check for a specific job, a few details up front let us give you a straight answer on fit and timing.</p>
+
+    <div class="contact-card">
+      <h3>Email us</h3>
+      <p><a class="email-big" href="mailto:ownersdesk@trailheadstandard.com">ownersdesk@trailheadstandard.com</a></p>
+      <p>For a Health Check inquiry, please include:</p>
+      <ul>
+        <li>Project type (for example: retail build-out, QSR ground-up, tenant improvement)</li>
+        <li>Current stage (preconstruction, under construction, closeout)</li>
+        <li>Project location (city and state)</li>
+        <li>What has you concerned: schedule, budget, change orders, documentation, or all of the above</li>
+        <li>Which documents you can share: schedule, budget or cost report, CO, RFI and submittal logs, OAC minutes, contract summary</li>
+      </ul>
+      <p>Ready to book instead? The Health Check is a fixed $495 and starts at checkout.</p>
+      <a href="https://ownersdesk.gumroad.com/l/project-health-check" class="btn-primary">Order the Project Health Check: $495</a>
+    </div>
+
+    <p style="color:var(--muted);margin-top:2rem">Prefer to look around first? <a href="index.html" style="color:var(--navy);font-weight:600">Back to the homepage</a> for the Health Check scope, the Controls Library, and the free RFI template sample.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="The Owner's Desk" onerror="this.style.display='none'" />
+      <p>The Owner's Desk, a Trailhead Standard LLC service. Owner-side construction project reviews and project-controls tools.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="https://ownersdesk.gumroad.com/l/project-health-check">Project Health Check: $495</a></li>
+        <li><a href="https://ownersdesk.gumroad.com/l/library">Project Controls Library: $49</a></li>
+        <li><a href="https://ownersdesk.gumroad.com/l/rfi-response-sample">Free RFI Template Sample</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:ownersdesk@trailheadstandard.com">ownersdesk@trailheadstandard.com</a></li>
+        <li><a href="contact.html">Contact Page</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Trailhead Standard LLC. All rights reserved.</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+  </div>
+</footer>
+</body>
+</html>
